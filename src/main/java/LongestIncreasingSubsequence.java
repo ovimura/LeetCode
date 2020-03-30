@@ -1,4 +1,4 @@
-/* Author: Ovidiu Mura
+/*
 * Given an unsorted array of integers, find the length of longest increasing subsequence.
 * Example:
 * Input: [10,9,2,5,3,7,101,18]
@@ -36,11 +36,7 @@ public class LongestIncreasingSubsequence {
         if(n==0)
             return 0;
         max_ref = 1;
-
-        // The function _lis() stores its result in max
         LIS(nums, n);
-
-        // returns max
         return max_ref;
     }
 }

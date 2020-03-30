@@ -2,13 +2,34 @@ package lis;
 
 import java.util.Arrays;
 
+
+/*
+* Given an unsorted array of integers, find the length of longest increasing subsequence.
+* Example:
+* Input: [10,9,2,5,3,7,101,18]
+* Output: 4
+* Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
+*
+* Note:
+    There may be more than one LIS combination, it is only necessary for you to return the length.
+    Your algorithm should run in O(n2) complexity.
+
+* Follow up: Could you improve it to O(n log n) time complexity?
+* https://leetcode.com/articles/longest-increasing-subsequence/#
+* */
+
 public class LisRecursionWithMemoization {
 
     public int lengthOfLIS(int[] nums) {
-        int memo[][] = new int[nums.length + 1][nums.length];
+        int memo[][] = new int[nums.length][nums.length];
         for (int[] l : memo) {
             Arrays.fill(l, -1);
         }
+        int ii= 0;
+        for(int i=0; i<memo.length; i++)
+            for(int j=0; j<memo[i].length; j++) {
+                ii++;
+            }
         return lengthofLIS(nums, -1, 0, memo);
     }
 
