@@ -11,7 +11,7 @@
 
 * Follow up: Could you improve it to O(n log n) time complexity?
 * */
-
+// https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/
 public class LongestIncreasingSubsequence {
     int max_ref = 0;
 
@@ -44,9 +44,3 @@ public class LongestIncreasingSubsequence {
         return max_ref;
     }
 }
-
-/*
-*
-*
-*
-* */
