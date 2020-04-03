@@ -1,4 +1,4 @@
-import MaximumSubarray.Solution;
+import MissingNumber.Solution;
 
 public class Main {
 
@@ -18,6 +18,8 @@ public class Main {
 //        Solution s = new Solution();
 //        System.out.println(s.singleNumber(new int[]{4,1,2,1,2}));
         Solution s = new Solution();
-        System.out.println(s.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4}));
+//        System.out.println(s.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4}));
+        System.out.println(s.missingNumber(new int[]{3,0,1}));
+        System.out.println(s.missingNumber(new int[]{9,6,4,2,3,5,7,0,1}));
     }
 }
