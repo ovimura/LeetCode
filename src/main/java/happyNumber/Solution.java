@@ -1,4 +1,4 @@
-package HappyNumber;
+package happyNumber;
 
 import java.util.LinkedHashSet;
 
