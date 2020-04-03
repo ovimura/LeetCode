@@ -3,7 +3,7 @@ import MaximumSubarray.Solution;
 public class Main {
 
     public static void main(String[] args) {
-//        LongestIncreasingSubsequence l = new LongestIncreasingSubsequence();
+//        lis.LongestIncreasingSubsequence l = new lis.LongestIncreasingSubsequence();
 //        System.out.println(l.lengthOfLIS(new int[]{10, 9, 2, 5, 3, 7, 101, 18}));
 //        System.out.println(l.lengthOfLIS(new int[]{10, 9, 2, 5, 3, 4}));
 //        System.out.println(l.lengthOfLIS(new int[]{}));
