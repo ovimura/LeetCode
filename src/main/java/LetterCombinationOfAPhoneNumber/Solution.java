@@ -21,27 +21,17 @@ public class Solution {
         for(char c: cs){
             lettersGrp.add(pad.get(Character.getNumericValue(c)));
         }
-        char[] a;
-        char[] b;
+        combinations.add("");
         for (int ii=0; ii<lettersGrp.size(); ii++) {
-            for(int jj=ii+1; jj<lettersGrp.size(); jj++) {
-                if (lettersGrp.size() == 1) {
-                    a = lettersGrp.get(0).toCharArray();
-                    b = new char[]{};
-                } else {
-                    a = lettersGrp.get(ii).toCharArray();
-                    b = lettersGrp.get(jj).toCharArray();
-                }
-                String str = "";
-                for (int i = 0; i < a.length; i++) {
-                    for (int j = 0; j < b.length; j++) {
-                        str = Character.toString(a[i]) + Character.toString(b[j]);
-                        combinations.add(str);
-                    }
-                    if (b.length == 0)
-                        combinations.add(Character.toString(a[i]));
+            ArrayList<String> strs = new ArrayList<>();
+            for (int i = 0; i < combinations.size(); i++) {
+                for (int j = 0; j < lettersGrp.get(ii).length(); j++) {
+                    strs.add(combinations.get(i) +
+                            Character.toString(lettersGrp.get(ii).toCharArray()[j]));
                 }
             }
+            combinations.clear();
+            combinations.addAll(strs);
         }
         return combinations;
     }
