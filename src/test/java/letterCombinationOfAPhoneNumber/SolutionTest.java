@@ -12,8 +12,6 @@ public class SolutionTest {
         Assert.assertArrayEquals(new String[]{"ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"}, str);
         str = s.letterCombinations("2").stream().toArray(String[]::new);
         Assert.assertArrayEquals(new String[]{"a","b","c"}, str);
-        str = s.letterCombinations("234").stream().toArray(String[]::new);
-        Assert.assertArrayEquals(new String[]{"a","b","c"}, str);
     }
 
     @Test
