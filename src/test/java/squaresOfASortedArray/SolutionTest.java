@@ -23,24 +23,36 @@ public class SolutionTest {
     @Test
     public void test3() {
         Solution s = new Solution();
-        Assert.assertArrayEquals(new int[]{0,1,9,16,100}, s.sortedSquares(new int[]{-4,-1,0,3,10}));
+        Assert.assertArrayEquals(new int[]{0,1,9,16,100}, s.sortedSquares2(new int[]{-4,-1,0,3,10}));
     }
 
     @Test
     public void test4() {
         Solution s = new Solution();
-        Assert.assertArrayEquals(new int[]{4,9,9,49,121}, s.sortedSquares(new int[]{-7,-3,2,3,11}));
+        Assert.assertArrayEquals(new int[]{4,9,9,49,121}, s.sortedSquares2(new int[]{-7,-3,2,3,11}));
     }
 
     @Test
     public void test5() {
         Solution s = new Solution();
-        Assert.assertArrayEquals(new int[]{0,1,9,16,100}, s.sortedSquares(new int[]{-4,-1,0,3,10}));
+        Assert.assertArrayEquals(new int[]{0,1,9,16,100}, s.sortedSquares3(new int[]{-4,-1,0,3,10}));
     }
 
     @Test
     public void test6() {
         Solution s = new Solution();
-        Assert.assertArrayEquals(new int[]{4,9,9,49,121}, s.sortedSquares(new int[]{-7,-3,2,3,11}));
+        Assert.assertArrayEquals(new int[]{4,9,9,49,121}, s.sortedSquares3(new int[]{-7,-3,2,3,11}));
+    }
+
+    @Test
+    public void test7() {
+        Solution s = new Solution();
+        Assert.assertArrayEquals(new int[]{0,1,9,16,100}, s.sortedSquares1(new int[]{-4,-1,0,3,10}));
+    }
+
+    @Test
+    public void test8() {
+        Solution s = new Solution();
+        Assert.assertArrayEquals(new int[]{4,9,9,49,121}, s.sortedSquares1(new int[]{-7,-3,2,3,11}));
     }
 }
