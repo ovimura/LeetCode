@@ -31,4 +31,16 @@ public class SolutionTest {
         Solution s = new Solution();
         Assert.assertArrayEquals(new int[]{4,9,9,49,121}, s.sortedSquares(new int[]{-7,-3,2,3,11}));
     }
+
+    @Test
+    public void test5() {
+        Solution s = new Solution();
+        Assert.assertArrayEquals(new int[]{0,1,9,16,100}, s.sortedSquares(new int[]{-4,-1,0,3,10}));
+    }
+
+    @Test
+    public void test6() {
+        Solution s = new Solution();
+        Assert.assertArrayEquals(new int[]{4,9,9,49,121}, s.sortedSquares(new int[]{-7,-3,2,3,11}));
+    }
 }
