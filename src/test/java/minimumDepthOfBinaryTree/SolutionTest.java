@@ -22,6 +22,6 @@ public class SolutionTest {
         Solution s = new Solution();
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
-        Assert.assertEquals(2, s.minDepth(root));
+        Assert.assertEquals(1, s.minDepth(root));
     }
 }
