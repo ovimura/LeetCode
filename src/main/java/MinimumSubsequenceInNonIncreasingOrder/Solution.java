@@ -1,5 +1,6 @@
 package MinimumSubsequenceInNonIncreasingOrder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
@@ -20,10 +21,21 @@ public class Solution {
     }
 
     public List<Integer> minSubsequence(int[] nums) {
+        List<Integer> sum= new ArrayList<>();
+        int total = 0, temp = 0;
         int[] t = insertionSort(nums);
-        for (int a: t) {
-            System.out.println(a);
+        for(int i=0; i<nums.length; i++) {
+            total += nums[i];
         }
-        return null;
+        for (int a=t.length-1; a>=0; a--) {
+            temp += nums[a];
+            if(temp > (total-temp)) {
+                sum.add(nums[a]);
+                break;
+            } else {
+                sum.add(nums[a]);
+            }
+        }
+        return sum;
     }
 }
