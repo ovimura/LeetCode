@@ -1,2 +1,3 @@
 # LeetCode
-https://leetcode.com/
+
+This repo contains my solutions for problems in https://leetcode.com/
