@@ -24,6 +24,27 @@ public class Solution {
         return sorted;
     }
 
+    public ListNode _insertionSortList(ListNode head) {
+        ListNode sorted=null, curr = head;
+        while(curr!=null) {
+            ListNode next = curr.next;
+            ListNode temp = curr;
+            if(sorted==null || sorted.val >= temp.val) {
+                temp.next = sorted;
+                sorted = temp;
+            } else {
+                ListNode current = sorted;
+                while (current.next != null && current.next.val < temp.val) {
+                    current = current.next;
+                }
+                temp.next = current.next;
+                current.next = temp;
+            }
+            curr = next;
+        }
+        return sorted;
+    }
+
     public ListNode insertionSortList1(ListNode head) {
         if (head == null || head.next == null)
             return head;
