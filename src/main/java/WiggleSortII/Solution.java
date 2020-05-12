@@ -7,7 +7,6 @@ public class Solution {
         if (nums == null || nums.length <= 1) {
             return;
         }
-
         Arrays.sort(nums);
         int n = nums.length;
 
@@ -28,7 +27,6 @@ public class Solution {
         for(int i=0; i<n; i++) {
             nums[i] = temp[i];
         }
-
 //        System.arraycopy(temp, 0, nums, 0, n);
     }
 
@@ -109,5 +107,37 @@ public class Solution {
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
+    }
+
+    public void wiggleSort2(int[] nums) {
+        Arrays.sort(nums);
+        int l=(nums.length%2==0)?(nums.length)/2-1:(nums.length)/2, r=nums.length-1;
+        int[] temp = new int[nums.length];
+        int i=0;
+        while(l>=0) {
+            temp[i++] = nums[l--];
+            if(i>nums.length-1)
+                break;
+            temp[i++] = nums[r--];
+        }
+        for(int j=0; j<nums.length; j++) {
+            nums[j] = temp[j];
+        }
+    }
+
+    public void wiggleSort3(int[] nums) {
+        Arrays.sort(nums);
+        int l=(nums.length%2==0)?(nums.length)/2-1:(nums.length)/2, r=nums.length-1;
+        int[] temp = new int[nums.length];
+        int i=0;
+        for(int j=0; j<nums.length; j++) {
+            if(j%2==0)
+                temp[i++] = nums[l--];
+            else
+                temp[i++] = nums[r--];
+        }
+        for(int j=0; j<nums.length; j++) {
+            nums[j] = temp[j];
+        }
     }
 }
