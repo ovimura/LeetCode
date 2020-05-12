@@ -1,24 +1,38 @@
 package InsertInterval;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Solution {
     public int[][] insert1(int[][] intervals, int[] newInterval) {
-
+        if(intervals.length == 0)
+            return new int[][] {new int[] {newInterval[0],newInterval[1]}};
         List<Integer[]> list = new ArrayList<>();
+        int left = newInterval[0], right = newInterval[1];
         for(int[] interval: intervals){
-            if(interval[1] < newInterval[0]){
-                list.add(new Integer[]{interval[0], interval[1]});
-            }else if(interval[0] > newInterval[1]){
-                list.add(new Integer[]{newInterval[0], newInterval[1]});
-                newInterval = interval;
-            }else if(interval[1] >= newInterval[0] || interval[0] <= newInterval[1]){
-                list.add(new Integer[]{Math.min(interval[0], newInterval[0]), Math.max(newInterval[1], interval[1])});
+            if(newInterval[0] >= interval[0] && newInterval[0] <= interval[1]) {
+                left = Math.min(newInterval[0], interval[0]);
             }
+            if(newInterval[1] >= interval[0] && newInterval[1] <= interval[1])
+                right = Math.max(newInterval[1], interval[1]);
         }
+        for(int j=0; j<intervals.length; j++) {
+            if(intervals[j][0]==left || intervals[j][1]==right ||
+                    (intervals[j][0]>left && intervals[j][0]<right && (intervals[j][1]>left && intervals[j][1]<right)))
+                continue;
+            else
+                list.add(new Integer[]{intervals[j][0], intervals[j][1]});
+        }
+        int j;
+        for(j=0; j<list.size(); j++) {
+            if(list.get(j)[0]>right)
+                break;
+        }
+        if(list.size()>1)
+            list.add(j, new Integer[]{left, right});
+        else if(j==0)
+            list.add(0,new Integer[]{left, right});
+        else
+            list.add(new Integer[]{left, right});
         int[][] result = new int[list.size()][2];
         for(int i=0; i<list.size();i++) {
             Integer[] temp = list.get(i);
