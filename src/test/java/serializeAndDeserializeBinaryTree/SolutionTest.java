@@ -4,7 +4,6 @@ import SameTree.TreeNode;
 import SerializeAndDeserializeBinaryTree.Solution;
 import org.junit.Assert;
 import org.junit.Test;
-import sun.reflect.generics.tree.Tree;
 
 public class SolutionTest {
     @Test
@@ -16,7 +15,7 @@ public class SolutionTest {
         root.right.left = new TreeNode(4);
         root.right.right = new TreeNode(5);
         String str = s.serialize(root);
-        Assert.assertEquals("", str);
+        Assert.assertEquals("1,2,null,null,3,4,null,null,5,null,null,", str);
         TreeNode r = s.deserialize(str);
     }
 }
