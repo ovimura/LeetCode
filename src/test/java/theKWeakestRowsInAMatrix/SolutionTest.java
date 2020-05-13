@@ -13,4 +13,12 @@ public class SolutionTest {
         int[][] m = new int[][] {{1,1,0,0,0}, {1,1,1,1,0}, {1,0,0,0,0}, {1,1,0,0,0}, {1,1,1,1,1}};
         Assert.assertEquals("[2, 0, 3]", Arrays.toString(s.kWeakestRows(m, 3)));
     }
+
+    @Test
+    public void test2() {
+        Solution s = new Solution();
+        int[][] m = new int[][] {{1,1,0,0,0}, {1,1,1,1,0}, {1,0,0,0,0}, {1,1,0,0,0}, {1,1,1,1,1}};
+        Assert.assertEquals("[2, 0, 3]", Arrays.toString(s.kWeakestRows(m, 3)));
+    }
+
 }
