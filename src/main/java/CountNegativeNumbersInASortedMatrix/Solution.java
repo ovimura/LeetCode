@@ -19,4 +19,14 @@ public class Solution {
         }
         return r;
     }
+
+    public int bs(int[] nums, int l, int r) {
+        if (r<l)
+            return r;
+        int mid = (r+l)/2;
+        if(nums[mid]<0)
+                return bs(nums, l, mid-1);
+        else
+                return bs(nums, mid+1, r);
+    }
 }
