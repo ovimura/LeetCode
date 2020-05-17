@@ -1,4 +1,4 @@
-package lis;
+package Lis;
 
 import java.util.Arrays;
 

@@ -1,6 +1,6 @@
 package lis;
 
-import lis.LongestIncreasingSubsequence;
+import Lis.LongestIncreasingSubsequence;
 import org.junit.Assert;
 import org.junit.Test;
 
