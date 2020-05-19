@@ -14,7 +14,7 @@ public class ShortestPathAdjacencyListRepresentation {
         this.V = v;
         dist = new int[V];
         settled = new HashSet<Integer>();
-        pq = new PriorityQueue<>(V, new Node());
+        pq = new PriorityQueue<Node>(V, new Node());
     }
 
     public void dijkstra(List<List<Node>> adj, int src) {
@@ -35,7 +35,7 @@ public class ShortestPathAdjacencyListRepresentation {
         int edgeDistance = -1;
         int newDistance = -1;
         for(int i=0; i<adj.get(u).size(); i++) {
-            Node v = adj. get(u).get(i);
+            Node v = adj.get(u).get(i);
             if(!settled.contains(v.node)) {
                 edgeDistance = v.cost;
                 newDistance = dist[u] + edgeDistance;

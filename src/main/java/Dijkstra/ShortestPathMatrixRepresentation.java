@@ -15,7 +15,6 @@ package Dijkstra;
 * is less than the distance value of v, then update the distance value of v.
 *
 * */
-
 public class ShortestPathMatrixRepresentation {
 
     static final int V = 9;

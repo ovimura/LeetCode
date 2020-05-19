@@ -33,11 +33,14 @@ public class ShortestPathAdjacencyListRepresentationTest {
         adj.get(4).add(new Node(5,10));
 
         adj.get(5).add(new Node(6,2));
+        adj.get(5).add(new Node(4,10));
 
         adj.get(6).add(new Node(7,1));
         adj.get(6).add(new Node(8,6));
+        adj.get(6).add(new Node(5,2));
 
         adj.get(7).add(new Node(8,7));
+        adj.get(7).add(new Node(6,1));
 
         ShortestPathAdjacencyListRepresentation shortestPathAdjacencyListRepresentation = new ShortestPathAdjacencyListRepresentation(V);
         shortestPathAdjacencyListRepresentation.dijkstra(adj, source);
