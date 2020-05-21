@@ -31,7 +31,7 @@ public class ShortestPathAdjacencyListRepresentation {
     }
 
     private void e_Neighbours(int u) {
-        // Process all the neighbours of thepassed node
+        // Process all the neighbours of the passed node
         int edgeDistance = -1;
         int newDistance = -1;
         for(int i=0; i<adj.get(u).size(); i++) {
