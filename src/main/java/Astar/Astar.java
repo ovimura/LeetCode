@@ -1,7 +1,7 @@
 package Astar;
 
 import java.util.*;
-
+// Reference: https://rosettacode.org/wiki/A*_search_algorithm#Java
 public class Astar {
     private final List<Node> open;
     private final List<Node> closed;
