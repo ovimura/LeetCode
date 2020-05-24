@@ -1,4 +1,4 @@
-package AmazonInterview;
+package DemoAmazonInterview;
 
 public class Solution2 {
     public int generalizedGCD(int num, int[]arr) {

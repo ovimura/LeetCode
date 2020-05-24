@@ -1,4 +1,4 @@
-package AmazonInterview;
+package DemoAmazonInterview;
 
 import java.util.ArrayList;
 import java.util.List;

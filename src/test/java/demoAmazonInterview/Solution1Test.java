@@ -1,6 +1,6 @@
-package amazonInterview;
+package demoAmazonInterview;
 
-import AmazonInterview.Solution1;
+import DemoAmazonInterview.Solution1;
 import org.junit.Test;
 
 import java.util.List;

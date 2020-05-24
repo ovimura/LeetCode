@@ -1,6 +1,6 @@
-package amazonInterview;
+package demoAmazonInterview;
 
-import AmazonInterview.Solution2;
+import DemoAmazonInterview.Solution2;
 import org.junit.Test;
 
 public class Solution2Test {
