@@ -33,4 +33,17 @@ public class FindLongestWordInStringTest {
         words.add("kangaroo");
         Assert.assertEquals("apple", s.findLongestString_greedy(letters, words));
     }
+
+    @Test
+    public void test3() {
+        FindLongestWordInString s = new FindLongestWordInString();
+        String letters = "abppplee";
+        List<String> words = new ArrayList<>();
+        words.add("able");
+        words.add("ale");
+        words.add("apple");
+        words.add("bale");
+        words.add("kangaroo");
+        Assert.assertEquals("apple", s.findLongestString_improve_greedy(letters, words));
+    }
 }
