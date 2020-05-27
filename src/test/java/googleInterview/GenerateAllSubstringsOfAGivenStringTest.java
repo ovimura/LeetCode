@@ -37,4 +37,11 @@ public class GenerateAllSubstringsOfAGivenStringTest {
         g.printSubsequences(new char[]{'a','b','c'}, 3);
         // 2^n + empty set -> []
     }
+
+    @Test
+    public void test5() {
+        GenerateAllSubstringsOfAGivenString g = new GenerateAllSubstringsOfAGivenString();
+        g.combine("wxyz");
+        // 2^n + empty set -> []
+    }
 }

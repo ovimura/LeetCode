@@ -69,4 +69,18 @@ public class GenerateAllSubstringsOfAGivenString {
         }
     }
 
+    public void combine(String s) {
+        inputString = s;
+        combine(0);
+    }
+    StringBuilder output = new StringBuilder();
+    String inputString;
+    public void combine(int start) {
+        for(int i=start; i<inputString.length(); ++i) {
+            output.append(inputString.charAt(i));
+            System.out.println(output);
+            combine(i+1);
+            output.setLength(output.length()-1);
+        }
+    }
 }
