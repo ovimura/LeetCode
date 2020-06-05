@@ -7,7 +7,7 @@ public class ReadFileTest {
     @Test
     public void test1() throws Exception {
         ReadFile rf = new ReadFile();
-        rf.read("c:\\Users\\omura\\Desktop\\Solution.java");
+        rf.read("c:\\Users\\omura\\Desktop\\SolutionTest.java");
     }
 
     @Test
