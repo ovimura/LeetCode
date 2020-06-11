@@ -3,6 +3,7 @@ package Bsf;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+
 public class Graph {
     private int V; // no of vertices
     private LinkedList<Integer> adj[]; // adjacency list
@@ -23,7 +24,6 @@ public class Graph {
         LinkedList<Integer> queue = new LinkedList<>();
         visited[s] = true;
         queue.add(s);
-
         while (queue.size() != 0) {
             s = queue.poll();
             System.out.print(s + " ");

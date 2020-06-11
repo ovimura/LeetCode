@@ -7,12 +7,12 @@ public class ReadFileTest {
     @Test
     public void test1() throws Exception {
         ReadFile rf = new ReadFile();
-        rf.read("c:\\Users\\omura\\Desktop\\SolutionTest.java");
+        //rf.read("file path");
     }
 
     @Test
     public void test2() throws Exception {
         ReadFile rf = new ReadFile();
-        rf.write("c:\\Users\\omura\\Desktop\\test.txt");
+        //rf.write("file path");
     }
 }
