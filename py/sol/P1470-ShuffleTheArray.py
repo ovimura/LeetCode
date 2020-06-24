@@ -3,9 +3,10 @@ from typing import List
 
 class Solution:
 
-    def shuffle(self, nums: List[int], n: int) -> List[int]:
-        li = [];
-        j = 0;
+    @staticmethod
+    def shuffle(nums: List[int], n: int) -> List[int]:
+        li = []
+        j = 0
         for i in range(0, len(nums), 2):
             li.append(nums[j])
             li.append(nums[n+j])
