@@ -1,5 +1,7 @@
 package IntegerBreak;
 
+// Reference: https://medium.com/@gepphkat/dynamic-programming-343-integer-break-4aa8dde3ee0f
+// Problem: https://leetcode.com/problems/integer-break/
 public class Solution {
     private int[] memo;
     // Recursion Solution
