@@ -28,7 +28,10 @@ public class Solution {
         }
         int[] temp = new int[nums.length];
         for(int i=0; i<nums.length; i++) {
-            temp[i] = result[nums[i]-1];
+            if(nums[i] == 0)
+                temp[i] = 0;
+            else
+                temp[i] = result[nums[i]-1];
         }
         return temp;
     }
