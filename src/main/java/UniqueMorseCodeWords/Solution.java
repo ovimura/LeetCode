@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class Solution {
     public int uniqueMorseRepresentations(String[] words) {
-        Set<String> result = new HashSet<String>();
+        Set<String> result = new HashSet<>();
         String[] morse = new String[] {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
         for(String w: words) {
             String m = "";
