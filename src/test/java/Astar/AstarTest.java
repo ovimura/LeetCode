@@ -1,8 +1,8 @@
 package astar;
 
-import org.junit.Test;
 import Astar.Astar;
 import Astar.Node;
+import org.junit.Test;
 
 import java.util.List;
 
