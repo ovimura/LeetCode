@@ -10,7 +10,7 @@ public class MyBSFTest {
     @Test
     public void test1() {
         MyBSF myBSF = new MyBSF(4);
-        List<Integer> adj[] = new ArrayList[4];
+        List<Integer>[] adj = new ArrayList[4];
         adj[0] = new ArrayList<>();
         adj[1] = new ArrayList<>();
         adj[2] = new ArrayList<>();

@@ -1,5 +1,6 @@
 package amazonOnlineInterview;
 
+import AmazonOnlineInterview.Solution1;
 import org.junit.Test;
 
 import java.util.ArrayList;
