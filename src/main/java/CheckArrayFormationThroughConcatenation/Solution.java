@@ -15,9 +15,8 @@ public class Solution {
                 }
             }
         }
-        ints.forEach(n -> {
-            System.out.println(n);
-        });
+        if (ints.size() != arr.length)
+            return false;
         boolean result = true;
         for(int a=0; a<ints.size(); a++) {
             if(arr[a] != ints.get(a))
