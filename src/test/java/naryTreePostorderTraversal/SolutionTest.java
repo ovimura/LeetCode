@@ -19,6 +19,7 @@ public class SolutionTest {
         root.children.get(0).children = new ArrayList<>();
         root.children.get(0).children.add(new Node(5));
         root.children.get(0).children.add(new Node(6));
-        s.postorder(root);
+        //s.postorder(root);
+        s.post2(root);
     }
 }
