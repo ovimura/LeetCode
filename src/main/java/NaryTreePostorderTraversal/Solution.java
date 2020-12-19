@@ -1,5 +1,7 @@
 package NaryTreePostorderTraversal;
 
+import sun.awt.image.ImageWatched;
+
 import java.util.*;
 
 // https://stackoverflow.com/questions/2969033/recursive-breadth-first-travel-function-in-java-or-c
@@ -192,4 +194,69 @@ public class Solution {
         return result;
     }
 
+    void traverse_iteratively(Node root, List<Integer> rs) {
+        if(root == null)
+            return;
+        LinkedList<Node> st = new LinkedList<>();
+        st.add(root);
+        while(st.isEmpty() == false) {
+            Node n = st.poll();
+            rs.add(n.val);
+            if(n.children != null)
+                for(Node c: n.children) {
+                    st.push(c);
+                }
+        }
+    }
+
+    // Iterative Solution
+    /*
+    *
+        Iterative DFS Algorithm
+        The iterative algorithm uses a stack to replace the recursive calls
+
+        iterative DFS(Vertex v)
+            mark v visited
+            make an empty Stack S
+            push all vertices adjacent to v onto S
+            while S is not empty do
+                Vertex w is pop off S
+                for all Vertex u adjacent to w do
+                    if u is not visited then
+                        mark u visited
+                        push u onto S
+    *
+    * */
+    public List<Integer> postorder00(Node r) {
+        List<Integer> rs = new ArrayList<>();
+        List<Integer> result = new ArrayList<>();
+        traverse_iteratively(r, rs);
+        System.out.println();
+        for(int i=rs.size()-1; i>=0; i--) {
+            result.add(rs.get(i));
+        }
+        return result;
+    }
+
+    public List<Integer> po(Node root) {
+        LinkedList<Integer> res = new LinkedList<>();
+        if(root == null)
+            return res;
+        LinkedList<Node> st = new LinkedList<>();
+        st.add(root);
+        while(!st.isEmpty()) {
+            Node n = st.poll();
+            res.add(n.val);
+            if(n.children != null) {
+                for(Node c: n.children) {
+                    st.push(c);
+                }
+            }
+        }
+        LinkedList<Integer> integers = new LinkedList<>();
+        for(int i=res.size()-1; i>=0; i--) {
+            integers.add(res.get(i));
+        }
+        return integers;
+    }
 }
