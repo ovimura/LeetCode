@@ -259,4 +259,26 @@ public class Solution {
         }
         return integers;
     }
+
+    public List<Integer> postorder4(Node root) {
+        if(root == null){
+            return new LinkedList<>();
+        }
+        Deque<Node> dq = new LinkedList<>();
+        dq.add(root);
+        List<Integer> ans = new LinkedList<>();
+        while(!dq.isEmpty()){
+            Node node = dq.pop();
+
+            ans.add(0,node.val);
+            //List<Node> childrenreverse = Collections.reverse(node.children);
+            for(Node i : node.children){
+                dq.push(i);
+            }
+        }
+        return ans;
+    }
+
+
+
 }
