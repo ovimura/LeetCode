@@ -15,4 +15,16 @@ public class Solution {
         }
         return seen.size();
     }
+
+    public int numSpecialEquivGroups1(String[] A) {
+        Set<String> rs = new HashSet<>();
+        for(String s: A) {
+            char[] w = new char[26*2];
+            for(int i=0; i<s.length(); i++) {
+                w[s.charAt(i) - 'a' + 26 *(i%2)]++;
+            }
+            rs.add(Arrays.toString(w));
+        }
+        return rs.size();
+    }
 }
