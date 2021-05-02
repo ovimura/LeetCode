@@ -1,8 +1,5 @@
 package DivisorGame;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Solution {
     public boolean divisorGame(int n) {
         int i = 1;
