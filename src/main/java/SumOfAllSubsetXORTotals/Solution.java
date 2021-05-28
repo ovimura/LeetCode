@@ -26,4 +26,22 @@ public class Solution {
         }
         return ans;
     }
+
+    private int total = 0;
+
+    public int subsetXORSum2(int [] nums) {
+        traverse(nums, 0, 0);
+        return total;
+    }
+
+    public void traverse(int[] nums, int idx, int xor) {
+        if(idx == nums.length) {
+            total += xor;
+            return;
+        }
+        traverse(nums, idx+1, xor^nums[idx]);
+        traverse(nums, idx+1, xor);
+    }
+
+
 }
