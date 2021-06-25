@@ -36,3 +36,5 @@
 *.sln
 
 *.cache
+
+obj/
