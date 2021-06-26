@@ -33,7 +33,13 @@ namespace LeetCode
 
         static void Main(string[] args)
         {
-            testP9();
+
+            int[][] input = new int[3][]; //{ { 1 , 2 }, { 1 , 3 }, { 2, 3 } };
+            input[0] = new int[] { 1, 2 };
+            input[1] = new int[] { 1, 3 };
+            input[2] = new int[] { 2, 3 };
+            int[] result = new RedundantConnection.Solution().FindRedundantConnection(input);
+            Console.WriteLine(result[0] + " : " + result[1]);
         }
     }
 }

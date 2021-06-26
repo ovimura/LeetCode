@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 
 namespace P9
 {
@@ -137,7 +137,7 @@ namespace P7
                     else
                         return val;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     return 0;
                 }
@@ -146,3 +146,32 @@ namespace P7
     }
 }
 
+namespace RedundantConnection {
+    public class Solution
+    {
+        public int[] FindRedundantConnection(int[][] edges)
+        {
+            int[] rs = new int[1];
+            List<int[]> ls = new List<int[]>();
+
+            foreach (int[] e in edges)
+            {
+                if (!ls.Contains(e))
+                {
+                    List<int[]> temp = new List<int[]>();
+                    for (int i = 0; i < edges.Length; i++)
+                    {
+                        if (e[1] == edges[i][1] && e[0] != edges[i][0])
+                            temp.Add(edges[i]);
+                    }
+                    foreach (int[] ee in temp)
+                    {
+                        ls.Add(ee);
+                    }
+                }
+            }
+            rs = ls[ls.Count-1];
+            return rs;
+        }
+    }
+}
