@@ -1,6 +1,7 @@
 package RedundantConnection;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -35,4 +36,82 @@ public class Solution {
         }
         return false;
     }
+
+    // Solution 2
+
+    ArrayList<Integer>[] graph = new ArrayList[1001];
+    void initGraph() {
+        for(int i=0; i<graph.length; i++) {
+            graph[i] = new ArrayList<>();
+        }
+    }
+    public int[] findRedundantConnection_1(int[][] edges) {
+        initGraph();
+        int[] rs = new int[2];
+        boolean[] seen = new boolean[1001];
+        for(int[] e: edges) {
+            for(int i=0; i< seen.length; i++)
+                seen[i] = false;
+            if(!graph[e[0]].isEmpty() && !graph[e[1]].isEmpty() && dfs(seen, e[0], e[1]))
+                return e;
+            graph[e[0]].add(e[1]);
+            graph[e[1]].add(e[0]);
+        }
+        return rs;
+    }
+
+    public boolean dfs(boolean[] seen, int start, int target) {
+        if(start == target)
+            return true;
+        if(seen[start])
+            return false;
+        seen[start] = true;
+        for (int n: graph[start]) {
+            if(dfs(seen, n, target)) return true;
+        }
+        return false;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
