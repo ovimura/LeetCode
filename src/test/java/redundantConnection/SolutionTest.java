@@ -10,6 +10,7 @@ public class SolutionTest {
         Solution s = new Solution();
         Assert.assertArrayEquals(new int[]{2,3}, s.findRedundantConnection(new int[][]{{1,2},{1,3}, {2,3}}));
         Assert.assertArrayEquals(new int[]{2,3}, s.findRedundantConnection_1(new int[][]{{1,2},{1,3}, {2,3}}));
+        Assert.assertArrayEquals(new int[]{2,3}, s.findRedundantConnection1(new int[][]{{1,2},{1,3}, {2,3}}));
     }
 
     @Test
@@ -23,6 +24,7 @@ public class SolutionTest {
         Solution s = new Solution();
         Assert.assertArrayEquals(new int[]{1,4}, s.findRedundantConnection(new int[][]{{1,2},{2,3},{3,4},{1,4},{1,5}}));
         Assert.assertArrayEquals(new int[]{1,4}, s.findRedundantConnection_1(new int[][]{{1,2},{2,3},{3,4},{1,4},{1,5}}));
+        Assert.assertArrayEquals(new int[]{1,4}, s.findRedundantConnection1(new int[][]{{1,2},{2,3},{3,4},{1,4},{1,5}}));
     }
 
     @Test
