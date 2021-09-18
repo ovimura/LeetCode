@@ -14,13 +14,13 @@ public class Solution {
             for(int i=0; i<l.length; i++)
                 l[i] = nums[i];
             return searchInsert(l, target);
-        } else if(target > nums[mid] && target <= nums[nums.length-1]) {
+        } else {//if(target > nums[mid] && target <= nums[nums.length-1]) {
             int len = nums.length - mid;
             int []r = new int[len];
             for(int j=mid; j<nums.length; j++)
                 r[j-mid] = nums[j];
             return mid + searchInsert(r, target);
         }
-        return -1;
+        //return -1;
     }
 }
