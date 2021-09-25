@@ -3,7 +3,7 @@ package SqrtX;
 // url: https://www.youtube.com/watch?v=HBdVVFqTrUU
 public class Solution {
     String pp = "0";
-    public int mySqrt(int x) {
+    public int mySqrt1(int x) {
         int r = 0;
         String re = "";
         if(x==0)
@@ -54,7 +54,7 @@ public class Solution {
 
     int findPerfectSquareRoot(int g, int temp, int val) {
         pp = Integer.toString(val);
-        String v = Integer.toString(val) + ((g<10)?"0"+g:g); //g; //Integer.parseInt(pp+((groups[j+1]<10)?"0"+groups[j+1]:groups[j+1]))
+        String v = Integer.toString(val) + ((g<10)?"0"+g:g);
         String t = Integer.toString(temp);
         for(int i=1; i<10; i++) {
             int a = Integer.parseInt(t+i);
@@ -63,5 +63,25 @@ public class Solution {
         }
         return 9;
     }
+
+    public int mySqrt(int x) {
+        long start = 0;
+        long end = x;
+        while(start+1<end) {
+            long mid = start + (end-start)/2;
+            if(mid*mid == x) {
+                return (int)mid;
+            } else if (mid*mid < x) {
+                start = mid;
+            } else {
+                end = mid;
+            }
+        }
+        if(end*end == x)
+            return (int)end;
+        return (int)start;
+    }
+
+
 }
 
