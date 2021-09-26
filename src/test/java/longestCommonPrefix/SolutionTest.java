@@ -20,6 +20,6 @@ public class SolutionTest {
     @Test
     public void test3() {
         Solution s = new Solution();
-        Assert.assertEquals("", s.longestCommonPrefix(new String[]{"ab", "a"}));
+        Assert.assertEquals("a", s.longestCommonPrefix(new String[]{"ab", "a"}));
     }
 }
