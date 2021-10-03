@@ -13,6 +13,5 @@ public class Solution {
             hasPathSum(root.right, targetSum-root.val);
             return found;
         }
-
     }
 }
