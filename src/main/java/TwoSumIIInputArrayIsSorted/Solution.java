@@ -14,4 +14,23 @@ public class Solution {
         }
         return null;
     }
+
+    public int[] twoSum1(int[] numbers, int target) {
+        int n = numbers.length;
+        int left = 0;
+        int right = n-1;
+
+        while(left < right){
+            int sum = numbers[left] + numbers[right];
+            if (sum == target) return new int[]{left+1, right+1};
+
+            if (sum < target ){
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return new int[0];
+    }
 }
