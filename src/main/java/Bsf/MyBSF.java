@@ -1,18 +1,22 @@
 package Bsf;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
 public class MyBSF {
-    boolean[] visited;
-    Stack<Integer> q;
+    private boolean[] visited;
+    private Stack<Integer> q;
+    private List<Integer> result;
+
     public MyBSF(int len) {
         visited = new boolean[len];
         q = new Stack<Integer>();
+        result = new ArrayList<>();
     }
 
-    public void run(List<Integer> adj[], int v) {
+    public List<Integer> run(List<Integer> adj[], int v) {
         for(int i=0; i<this.visited.length; i++) {
             visited[i] = false;
         }
@@ -20,7 +24,8 @@ public class MyBSF {
         visited[v] = true;
         while (!q.isEmpty()) {
             int u = q.pop();
-            System.out.print(u + " ");
+            //System.out.print(u + " ");
+            result.add(u);
             List<Integer> vs = adj[u];
             while(vs.size() > 0) {
                 int t = vs.get(0);
@@ -31,5 +36,6 @@ public class MyBSF {
                 }
             }
         }
+        return result;
     }
 }
