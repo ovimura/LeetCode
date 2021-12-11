@@ -36,4 +36,32 @@ public class Solution {
             getAncestors(root.right, p, ancestors);
         }
     }
+
+
+    public TreeNode lowestCommonAncestor1(TreeNode root, TreeNode p, TreeNode q) {
+        if (p.val > q.val) {
+            return findLowestCommonAncestor1(root, q, p);
+        }
+        return findLowestCommonAncestor1(root, p, q);
+    }
+
+    private TreeNode findLowestCommonAncestor1(TreeNode node, TreeNode p, TreeNode q) {
+        if (node == null) {
+            return null;
+        }
+
+        if (node.val < p.val) {
+            return findLowestCommonAncestor1(node.right, p, q);
+        }
+        if (node.val > q.val) {
+            return findLowestCommonAncestor1(node.left, p, q);
+        }
+
+        return node;
+    }
+
+
+
+
+
 }
