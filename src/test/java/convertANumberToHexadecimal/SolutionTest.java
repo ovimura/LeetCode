@@ -9,6 +9,6 @@ public class SolutionTest {
     @Test
     public void test1() {
         Solution s = new Solution();
-        System.out.println(s.toHex(-8));
+        Assert.assertEquals("fffffff8",s.toHex(-8));
     }
 }
