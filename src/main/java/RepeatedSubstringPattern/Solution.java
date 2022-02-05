@@ -1,5 +1,7 @@
 package RepeatedSubstringPattern;
 
+
+// solution url: https://cheonhyangzhang.gitbooks.io/leetcode-solutions/content/solutions-451-500/459-repeated-substring-pattern.html
 public class Solution {
     public boolean repeatedSubstringPattern(String s) {
         boolean r = false;
