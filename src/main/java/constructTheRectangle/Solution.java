@@ -1,4 +1,4 @@
-package constructTheRectangle;
+package ConstructTheRectangle;
 
 import java.util.ArrayList;
 import java.util.List;

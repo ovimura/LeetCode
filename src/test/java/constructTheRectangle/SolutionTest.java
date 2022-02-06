@@ -1,5 +1,7 @@
 package constructTheRectangle;
 
+import ConstructTheRectangle.Solution;
+
 import org.junit.Assert;
 import org.junit.Test;
 
