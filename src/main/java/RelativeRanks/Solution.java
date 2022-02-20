@@ -62,4 +62,25 @@ public class Solution {
         }
         return r;
     }
+
+    public String[] findRelativeRanks1(int[] score) {
+        Map<Integer,String> rankMap = new HashMap<>();
+        String[] result = new String[score.length];
+        int[] copy = Arrays.copyOf(score,score.length);
+        Arrays.sort(score);
+        int rank = 4;
+        for(int i=score.length-1;i>-1;i--) {
+            if(i==score.length-1)  rankMap.put(score[i],"Gold Medal");
+            else if(i==score.length-2)  rankMap.put(score[i],"Silver Medal");
+            else if(i==score.length-3)  rankMap.put(score[i],"Bronze Medal");
+            else {
+                rankMap.put(score[i],String.valueOf(rank));
+                rank++;
+            }
+        }
+        for(int i=0;i<copy.length;i++) {
+            result[i] = rankMap.get(copy[i]);
+        }
+        return result;
+    }
 }
