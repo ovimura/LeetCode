@@ -1,8 +1,5 @@
 package LongestUncommonSubsequenceI;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Solution {
     public int findLUSlength(String a, String b) {
         if(a.equals(b))
