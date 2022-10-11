@@ -6,15 +6,13 @@ public class Solution {
         for(char c: s.toLowerCase().toCharArray()) {
             if(c != 'l')
                 l = 0;
-            if(a >= 2)
-                return false;
             if(c == 'a') {
                 a++;
             }
             if(c == 'l') {
                 l++;
             }
-            if(l >= 3)
+            if(a >= 2 || l >= 3)
                 return false;
         }
         return true;
