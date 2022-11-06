@@ -1,11 +1,7 @@
 package FloodFill;
 
-import javafx.util.Pair;
-
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Solution {
     class Point <X, Y>{
@@ -29,8 +25,6 @@ public class Solution {
         List<Point<Integer, Integer>> changed_points = new ArrayList<>();
         changed_points.add(new Point(sr, sc));
         int orig_color = image[sr][sc];
-        int lx = 0, rx = 0, ly = 0, ry = 0;
-        boolean adding = true;
         int count = 0;
         while(changed_points.size()>0) {
             Point p = changed_points.remove(0);
