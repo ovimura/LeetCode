@@ -1,4 +1,4 @@
-package totalHammingDistance;
+package TotalHammingDistance;
 
 public class Solution {
 
