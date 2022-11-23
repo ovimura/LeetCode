@@ -3,6 +3,15 @@ package FairCandySwap;
 import java.util.HashSet;
 import java.util.Set;
 
+/*
+    Solve the equations:
+
+        Sa−x+y=Sb−y+x
+
+        y = x + (Sb-Sb)/2
+
+*/
+
 public class Solution {
 
     public int[] fairCandySwap(int[] aliceSizes, int[] bobSizes) {
