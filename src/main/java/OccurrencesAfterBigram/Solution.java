@@ -12,7 +12,6 @@ public class Solution {
             if(words[i].equals(first) && words[i+1].equals(second)) {
                 ocurr.add(words[i+2]);
             }
-
         }
         return ocurr.toArray(new String[]{});
     }
