@@ -2,10 +2,27 @@ package WordPattern;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 
 public class Solution {
+
+
     public boolean wordPattern(String pattern, String s) {
+        char[] chars = pattern.toCharArray();
+        String[] strs = s.split(" ");
+        if (chars.length != strs.length) return false;
+        Map<Character, Integer> cmap = new HashMap<>();
+        Map<String, Integer> smap = new HashMap<>();
+        for (Integer i = 0; i < chars.length; i++) {
+            if (!Objects.equals(cmap.put(chars[i], i), smap.put(strs[i], i))) return false;
+        }
+        return true;
+    }
+
+
+
+    public boolean wordPattern_0(String pattern, String s) {
         Map<Character, Integer> p = new HashMap<Character, Integer>();
         Map<String, Integer> ss = new HashMap<String, Integer>();
         for(char c: pattern.toCharArray()) {
