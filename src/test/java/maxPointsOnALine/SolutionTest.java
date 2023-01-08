@@ -1,6 +1,6 @@
-package maximumSubarray;
+package maxPointsOnALine;
 
-import MaximumSubarray.*;
+import MaxPointsOnALine.*;
 
 import org.junit.Test;
 
@@ -8,7 +8,6 @@ public class SolutionTest {
     @Test
     public void test1() {
         Solution s = new Solution();
-        int r = s.maxSubArray(new int[]{1,2,3});
-        assert 6 == r;
+        assert 3 == s.maxPoints(new int[][]{{1,1},{2,2},{3,3}});
     }
 }
