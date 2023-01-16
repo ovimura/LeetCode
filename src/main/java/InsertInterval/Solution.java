@@ -2,6 +2,7 @@ package InsertInterval;
 
 import java.util.*;
 
+// Reference: https://wentao-shao.gitbook.io/leetcode/array/57.insert-interval
 public class Solution {
     public int[][] insert1(int[][] intervals, int[] newInterval) {
         if(intervals.length == 0)
