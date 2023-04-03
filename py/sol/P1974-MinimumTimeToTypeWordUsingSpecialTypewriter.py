@@ -59,6 +59,15 @@ class Solution:
             count_steps += tt
         return count_steps
 
+    def minTimeToType_nicer(self, word: str) -> int:
+        s = 'a'
+        res = 0
+        for w in word:
+            res += min(abs(ord(w)-ord(s)), 26 - abs(ord(w)-ord(s)))
+            res += 1
+            s = w
+        return res
+
 
 s = Solution()
 
