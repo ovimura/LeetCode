@@ -5,7 +5,7 @@ from typing import List
 def insertion_sorting(arr) -> List[int]:
     """
     Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time by
-    comparisons.
+    comparisons. https://en.wikipedia.org/wiki/Insertion_sort
     :param arr: an array of int elements
     :return: sorted array of int elements
     """
