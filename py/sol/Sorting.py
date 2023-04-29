@@ -2,7 +2,13 @@ import random
 from typing import List
 
 
-def sorting(arr) -> List[int]:
+def insertion_sorting(arr) -> List[int]:
+    """
+    Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time by
+    comparisons.
+    :param arr: an array of int elements
+    :return: sorted array of int elements
+    """
     q = []
     while len(arr) != 0:  # n elements in arr
         i = arr.pop(0)
@@ -29,12 +35,11 @@ def sorting(arr) -> List[int]:
     return q
 
 
-# a = [2, 1, 4, 2, 1, 3]
 a = [2, 1, 4, 4, 2, 1, 3, 3]
 
 random.shuffle(a)
 
-assert [1, 1, 2, 2, 3, 3, 4, 4] == sorting(a)
+assert [1, 1, 2, 2, 3, 3, 4, 4] == insertion_sorting(a)
 
 
 
