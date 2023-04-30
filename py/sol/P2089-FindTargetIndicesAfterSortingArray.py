@@ -7,7 +7,11 @@ class Solution:
 
     def targetIndices(self, nums: List[int], target: int) -> List[int]:
         r = []
-
+        self.sorting(nums)
+        for i in range(len(nums)):
+            if nums[i] == target:
+                r.append(i)
+        self.sorting(r)
         return r
 
     def sorting(self, A) -> List[int]:
@@ -32,3 +36,7 @@ random.shuffle(AA)
 
 assert [1, 2, 3, 5] == (s.sorting(A))
 assert [1, 1, 2, 2, 3, 5] == (s.sorting(AA))
+
+assert [1, 2] == s.targetIndices([1, 2, 5, 2, 3], 2)
+assert [3] == s.targetIndices([1, 2, 5, 2, 3], 3)
+assert [4] == s.targetIndices([1, 2, 5, 2, 3], 5)
