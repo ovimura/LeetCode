@@ -17,4 +17,4 @@ class Solution:
 
 s = Solution()
 
-print(s.firstPalindrome(["abc", "car", "ada", "racecar", "cool"]))
+assert "ada" == (s.firstPalindrome(["abc", "car", "ada", "racecar", "cool"]))
