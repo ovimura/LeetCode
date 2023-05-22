@@ -21,8 +21,6 @@ class Solution:
                 sum_all_pairs.append((new1 + new2))
         return min(sum_all_pairs)
 
-    all_perm = []
-
     def gen_all_perm(self, num, i, all_paris):
         if i == len(num):
             cp = num.copy()
