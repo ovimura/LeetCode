@@ -24,7 +24,7 @@ class Solution:
 
 s = Solution()
 
-print(s.mergeSimilarItems([[1,1],[4,5],[3,8]], [[3,1],[1,5]]))
+assert [[1, 6], [3, 9], [4, 5]] == (s.mergeSimilarItems([[1,1],[4,5],[3,8]], [[3,1],[1,5]]))
 
 # [[1,6],[3,9],[4,5]]
 # [[1,6],[3,9],[4,5]]
