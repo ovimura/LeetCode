@@ -3,9 +3,8 @@
 public class MainDriver {
 	public static void main(String[] args) {
 		Solutions s = new Solutions();
-		System.out.println("-------------------");
-		System.out.println(s.equalFrequency("cccaa"));
-		System.out.println("---------+---------");
+		assert (s.equalFrequency("cccaa"));
+		assert (s.haveConflict(new String[] {"01:15","02:00"}, new String[] {"02:00","03:00"}));
 	}
 }
 

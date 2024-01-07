@@ -29,8 +29,15 @@ public class Solutions {
     	}    	
     	return false;
     }
-    
+
     public boolean haveConflict(String[] event1, String[] event2) {
+    	Integer e1_start = Integer.valueOf(event1[0].split(":")[0])*60 + Integer.valueOf(event1[0].split(":")[1]);
+    	Integer e1_end = Integer.valueOf(event1[1].split(":")[0])*60 + Integer.valueOf(event1[1].split(":")[1]);
+    	Integer e2_start = Integer.valueOf(event2[0].split(":")[0])*60 + Integer.valueOf(event2[0].split(":")[1]);
+    	Integer e2_end = Integer.valueOf(event2[1].split(":")[0])*60 + Integer.valueOf(event2[1].split(":")[1]);
+    	if(e1_end >= e2_start && e1_start <= e2_start  || e2_end >= e1_start && e2_start <= e1_start) {
+    		return true;
+    	}
         return false;
     }
 }
