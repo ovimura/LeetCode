@@ -13,9 +13,43 @@ class Solution:
             if remaining_money >= remaining_children and (remaining_money != 4 or remaining_children > 1):
                 return max_eight_dollars
             max_eight_dollars -= 1  # Reduce 8-dollar count and retry
-        return -1  # No valid way to distribute
+        return -1
+
+    def distMoney2(self, money: int, children: int) -> int:
+        r = 0
+        if money < children:
+            return -1
+        mem = [[0]*8 for _ in range(children)]
+        for i in range(children):
+            mem[i][0] = 1
+            money -= 1
+        finish = False
+        if money > 0:
+            for j in range(children):
+                if money <= 0:
+                    finish = True
+                if finish:
+                    break
+                for k in range(1, 8):
+                    mem[j][k] = 1
+                    money -= 1
+                    if money == 0:
+                        finish = True
+                        break
+        for i in range(children):
+            if sum(mem[i]) == 8:
+                r += 1
+            if sum(mem[i]) == 4 and i == children-1:
+                r -= 1
+        if r < 0:
+            return 0
+        elif money != 0 and r > 0:
+            return r-1
+        else:
+            return r
 
 
 s = Solution()
 
-assert 2 == (s.distMoney(20, 4))
+assert 1 == (s.distMoney2(13, 3))
+assert 1 == (s.distMoney2(14, 7))
