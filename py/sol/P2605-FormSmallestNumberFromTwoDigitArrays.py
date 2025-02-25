@@ -32,7 +32,6 @@ class Solution:
         nums1.sort()
         nums2.sort()
         common_digits = []
-
         for n1 in nums1:
             if n1 in nums2:
                 common_digits.append(n1)
@@ -48,7 +47,7 @@ class Solution:
 s = Solution()
 
 
-# print(s.minNumber([4, 1, 3], [5, 7]))
+assert 15 == (s.minNumber([4, 1, 3], [5, 7]))
 
-print(s.minNumber([3, 5, 2, 6], [3, 1, 7]))
+assert 3 == (s.minNumber([3, 5, 2, 6], [3, 1, 7]))
 
