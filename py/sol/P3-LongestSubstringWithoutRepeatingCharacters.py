@@ -1,26 +1,20 @@
 
 class Solution:
-    def has_dup(self, ss: str) -> bool:
-        for i in range(len(ss)):
-            if ss[i] in ss[i+1:]:
-                return True
-        return False
-
-    def lengthOfLongestSubstring(self, sss: str) -> int:
-        r = 0
-        for i in range(len(sss)-1):
-            c = 0
-            for j in range(i+1, len(sss)+1):
-                if not self.has_dup(sss[i: j]):
-                    c += 1
-                else:
-                    break
-            if c > r:
-                r = c
-        return r
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        char_set = set()
+        left = 0
+        max_length = 0
+        for right in range(len(s)):
+            while s[right] in char_set:
+                char_set.remove(s[left])
+                left += 1
+            char_set.add(s[right])
+            max_length = max(max_length, right - left + 1)
+        return max_length
 
 
 s = Solution()
 
 assert 3 == (s.lengthOfLongestSubstring('abcabcbb'))
 assert 3 == (s.lengthOfLongestSubstring('abc'))
+assert 3 == (s.lengthOfLongestSubstring(('abcb')))
