@@ -6,3 +6,4 @@ obj/
 java_pid13100.hprof
 /py/sol/temp.py
 py/sol/__pycache__/
+venv/
