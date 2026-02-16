@@ -23,4 +23,4 @@ class Solution:
 
 s = Solution()
 
-assert 5 == (s.countBeautifulPairs([2,5,1,4]))
+assert 5 == (s.countBeautifulPairs([2, 5, 1, 4]))
